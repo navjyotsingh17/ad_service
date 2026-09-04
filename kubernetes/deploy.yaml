@@ -31,7 +31,7 @@ spec:
       serviceAccountName: opentelemetry-demo
       containers:
         - name: adservice
-          image: navjyotsinghpulaha/ad-service:33871100672
+          image: navjyotsinghpulaha/ad-service:33871280912
           imagePullPolicy: IfNotPresent
           ports:
             
