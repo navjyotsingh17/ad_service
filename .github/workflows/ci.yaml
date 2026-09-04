@@ -15,16 +15,14 @@ jobs:
           - name: checkout code
             uses: actions/checkout@v4
 
-          - name: setup node
-            uses: actions/setup-node@v3
+          - name: set up JDK 17
+            uses: actions/setup-java@v3
             with:
-                node-version: 18
+              distribution: temurin
+              java-version: 17
 
-          - name: install dependencies
-            run: npm install
-
-          - name: run tests
-            run: npm test
+          - name: build with gradle
+            run: ./gradlew installDist
 
   
     checkstyle:
